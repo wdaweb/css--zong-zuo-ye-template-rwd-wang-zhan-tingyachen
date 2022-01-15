@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/rwd.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/reset.css">
+</head>
+
+<body style="font-family: 'Work Sans', sans-serif;">
+  <header>
+    <div id="container">
+      <!-- 註冊、登入導航欄 ----------------------------------->
+      <div class="header-top">
+        <div class="header-left">
+          <ul>
+            <li>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-vimeo-v"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="header-right">
+          <ul>
+            <li>
+              <a href="#">
+                <i class="far fa-edit"></i>
+                <span class="change-color">REGISTER</span>
+              </a>
+            </li>
+            <li>
+              <i class="or">OR</i>
+            </li>
+            <li>
+              <a href="#">
+                <i class="far fa-edit"></i>
+                <span class="change-color">SIGN IN</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- burger menu ---------------------->
+      <span class="open-slide">
+        <a href="#" onclick="openSlideMenu()">
+          <svg width="30" height="30">
+            <path d="M0,5 30,5" stroke="#fff" stroke-width="5" />
+            <path d="M0,14 30,14" stroke="#fff" stroke-width="5" />
+            <path d="M0,23 30,23" stroke="#fff" stroke-width="5" />
+          </svg>
+        </a>
+      </span>
+      <div id="side-menu" class="side-nav">
+        <div class="side-menu-logo border-bottom">
+          <img src="./images/logo.png">
+        </div>
+        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <div class="burger-list">
+          <a href="#" class="border-bottom">Home</a>
+          <a href="#" class="border-bottom">Pages</a>
+          <a href="#" class="border-bottom">Shop</a>
+          <a href="#" class="border-bottom">Blog</a>
+          <a href="#" class="border-bottom">Contacts</a>
+        </div>
+        <div class="bottom-icon">
+          <ul>
+            <li>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-facebook-square"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-pinterest-p"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 搜尋、購物車 ------------------------------->
+      <div class="header-menu">
+        <div class="header-logo">
+          <img src="./images/logo.png">
+        </div>
+        <div id="menu-area">
+          <nav id="menu">
+            <ul>
+              <li class="none">
+                <a href="#" class="home" style="color: white;">HOME</a>
+              </li>
+              <li class="none">
+                <a href="#" class="hover-block">PAGES</a>
+                <ul class="submenu-1">
+                  <li><a href="#" style="text-align: left;padding: 30px 0 10px 20px;">UC OVERVIEW</a></li>
+                  <li><a href="#" style="text-align: left;padding: 15px 0 10px 20px;">UC DETAILS</a></li>
+                </ul>
+              </li>
+              <li class="none">
+                <a href="#" class="hover-block">SHOP</a>
+                <ul class="submenu-1">
+                  <li><a href="#" style="text-align: left;padding: 30px 0 10px 20px;">GAME SHOP</a></li>
+                  <li><a href="#" style="text-align: left;padding: 15px 0 10px 20px;">SHOP DETAILS</a></li>
+                </ul>
+              </li>
+              <li class="none">
+                <a href="#" class="hover-block">BLOG</a>
+                <ul class="submenu-1">
+                  <li><a href="#" style="text-align: left;padding: 30px 0 10px 20px;">OUR BLOG</a></li>
+                  <li><a href="#" style="text-align: left;padding: 15px 0 10px 20px;">BLOG DETAILS</a></li>
+                </ul>
+              </li>
+              <li class="none">
+                <a href="#" class="hover-block">CONTACTS</a>
+              </li>
+              <li class="shopping-cart none2">
+                <a href="#">
+                  <i class="fas fa-shopping-basket"></i>
+                  <span>0</span>
+                </a>
+                <!-------------------------- 購物車下拉選單 -------------------->
+                <ul class="minicart">
+                  <li>
+                    <div class="cart-img">
+                      <a href="#" style="width: 150px;padding-top: 10px;">
+                        <img src="./images/cart_p01.jpg">
+                      </a>
+                    </div>
+                    <div class="cart-content">
+                      <h4>
+                        <a href="#" class="product-title">XBOX ONE
+                          CONTR -OLLER</a>
+                      </h4>
+                      <div class="cart-price" style="text-align: left;">
+                        <span class="new">$229.9</span>
+                        <span style="font-size: 14px;">
+                          <del>$229.9</del>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="del-icon">
+                      <a href="#" class="trash-button">
+                        <i class="far fa-trash-alt"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li style="padding-bottom: 30px;">
+                    <div class="cart-img">
+                      <a href="#" style="width: 150px;padding-top: 10px;">
+                        <img src="./images/cart_p02.jpg">
+                      </a>
+                    </div>
+                    <div class="cart-content">
+                      <h4>
+                        <a href="#" class="product-title">RTX 2030
+                          GRAPHIC CARD</a>
+                      </h4>
+                      <div class="cart-price" style="text-align: left;">
+                        <span class="new">$499.9</span>
+                        <span style="font-size: 14px;">
+                          <del>$599.9</del>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="del-icon">
+                      <a href="#" class="trash-button">
+                        <i class="far fa-trash-alt"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="total-price">
+                      <span style="padding-right: 235px;">Total:</span>
+                      <span>$239.9</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkout-link">
+                      <a href="#" class="shopping-button">SHOPPING CART</a>
+                      <a href="#" class="checkout-button">CHECKOUT</a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" style="width: 100px;">
+                  <i class="fas fa-search none2"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="main">
+    <div id="container">
+      <section id="slide-area">
+        <div class="big-img">
+          <button type="button" class="left-arrow none2">
+            <i class="fas fa-angle-left"></i>
+          </button>
+          <div class="intro-text">
+            <h6>CREATE AND <span>GAME</span></h6>
+            <h2>ONLINE MATCHES</h2>
+            <p>Largest and most trusted top-up websites for games and <br> online entertainment in Asia and beyond.</p>
+            <a href="#" class="btn">READ　MORE</a>
+          </div>
+          <button type="button" class="right-arrow none2">
+            <i class="fas fa-angle-right"></i>
+          </button>
+        </div>
+      </section>
+      <!---------- 主機分類 ------------------------------>
+      <section id="game-boost-area">
+        <div class="game-boost-wrap">
+          <h3 style="color: white;font-weight: 600;">
+            <i class="fas fa-play"></i>
+            OTHER GAMES <span>BOOST</span>
+          </h3>
+          <div class="boost-list">
+            <div class="boost-item">
+              <div class="icon">
+                <img src="./images/ps4.png">
+              </div>
+              <div class="content item-line1">
+                <h4>PS4 SLIM</h4>
+                <span>GENERATIONS OF XBOX</span>
+              </div>
+            </div>
+            <div class="boost-item">
+              <div class="icon">
+                <img src="./images/ns.png">
+              </div>
+              <div class="content item-line2">
+                <h4>NINTENDO SWITCH</h4>
+                <span>SYSTEM PLAYS LIBRARY</span>
+              </div>
+            </div>
+            <div class="boost-item">
+              <div class="icon">
+                <img src="./images/xbox.png">
+              </div>
+              <div class="content">
+                <h4>XBOX SERIES</h4>
+                <span>GENERATIONS OF XBOX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!---------- 系列商品 ------------------------------>
+      <section id="offer-product-area">
+        <div class="product-list">
+          <div class="product-item1">
+            <div class="product-content">
+              <h6>LIMITED <span>OFFER</span></h6>
+              <h3 class="change-text-color">
+                <span class="change-color2">VR</span>
+                <a href="#" class="change-color">VIRTUAL　PRO</a>
+              </h3>
+              <p>VR headset transparent png Teddy Rawpixel.publisn graphic.</p>
+              <a href="#" class="btn">READ　MORE</a>
+            </div>
+          </div>
+          <div class="product-item2">
+            <div class="product-content">
+              <h6>LIMITED <span>05% OFF</span></h6>
+              <h3 class="change-text-color">
+                <span class="change-color2">XBOX</span>
+                <a href="#" class="change-color">SERIES　PRO</a>
+              </h3>
+              <p>VR headset transparent png Teddy Rawpixel.publisn graphic.</p>
+              <a href="#" class="btn">READ　MORE</a>
+            </div>
+          </div>
+        </div>
+        <div class="offer-product-bg-line"></div>
+        <div class="offer-product-bg-line line2"></div>
+      </section>
+      <!---------- 熱門遊戲 ------------------------------>
+      <section id="popular-game-area">
+        <div class="popular-game-title">
+          <h3 style="color: white;font-weight: 600;">
+            <i class="fas fa-play"></i>
+            POPULAR GAME <span>TOP UP</span>
+          </h3>
+        </div>
+        <div class="popular-game-wrap">
+          <div class="game-list">
+            <div class="game-item">
+              <div class="game-cover-pic">
+                <img src="./images/popular_games01.jpg">
+              </div>
+              <div class="game-content">
+                <div class="top-up-star">
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>JUDGE <span>DESTINY</span></p>
+              </div>
+              <div class="game-overlay">
+                <h6>
+                  <a href="#">
+                    JUDGE
+                    <span>600 U.C</span>
+                  </a>
+                </h6>
+                <a href="#" class="cart">
+                  <i class="fas fa-shopping-basket"></i>
+                </a>
+              </div>
+            </div>
+            <div class="game-item">
+              <div class="game-cover-pic">
+                <img src="./images/popular_games02.jpg">
+              </div>
+              <div class="game-content">
+                <div class="top-up-star">
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>KLCK <span>ESPORTS</span></p>
+              </div>
+              <div class="game-overlay">
+                <h6>
+                  <a href="#">
+                    JUDGE
+                    <span>600 U.C</span>
+                  </a>
+                </h6>
+                <a href="#" class="cart">
+                  <i class="fas fa-shopping-basket"></i>
+                </a>
+              </div>
+            </div>
+            <div class="game-item">
+              <div class="game-cover-pic">
+                <img src="./images/popular_games03.jpg">
+              </div>
+              <div class="game-content">
+                <div class="top-up-star">
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>BATTLEG <span>PUBG</span></p>
+              </div>
+              <div class="game-overlay">
+                <h6>
+                  <a href="#">
+                    JUDGE
+                    <span>600 U.C</span>
+                  </a>
+                </h6>
+                <a href="#" class="cart">
+                  <i class="fas fa-shopping-basket"></i>
+                </a>
+              </div>
+            </div>
+            <div class="game-item">
+              <div class="game-cover-pic">
+                <img src="./images/popular_games04.jpg">
+              </div>
+              <div class="game-content">
+                <div class="top-up-star">
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>JUDGE <span>DESTINY</span></p>
+              </div>
+              <div class="game-overlay">
+                <h6>
+                  <a href="#">
+                    JUDGE
+                    <span>600 U.C</span>
+                  </a>
+                </h6>
+                <a href="#" class="cart">
+                  <i class="fas fa-shopping-basket"></i>
+                </a>
+              </div>
+            </div>
+            <div class="game-item">
+              <div class="game-cover-pic">
+                <img src="./images/popular_games05.jpg">
+              </div>
+              <div class="game-content">
+                <div class="top-up-star">
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>CALL OF <span> DUTY</span></p>
+              </div>
+              <div class="game-overlay">
+                <h6>
+                  <a href="#">
+                    JUDGE
+                    <span>600 U.C</span>
+                  </a>
+                </h6>
+                <a href="#" class="cart">
+                  <i class="fas fa-shopping-basket"></i>
+                </a>
+              </div>
+            </div>
+            <div class="game-item">
+              <div class="game-cover-pic">
+                <img src="./images/popular_games06.jpg">
+              </div>
+              <div class="game-content">
+                <div class="top-up-star">
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>VALORANT <span> II</span></p>
+              </div>
+              <div class="game-overlay">
+                <h6>
+                  <a href="#">
+                    JUDGE
+                    <span>600 U.C</span>
+                  </a>
+                </h6>
+                <a href="#" class="cart">
+                  <i class="fas fa-shopping-basket"></i>
+                </a>
+              </div>
+            </div>
+            <div class="game-item">
+              <div class="game-cover-pic">
+                <img src="./images/popular_games07.jpg">
+              </div>
+              <div class="game-content">
+                <div class="top-up-star">
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>CLASH OF <span>CLANS</span></p>
+              </div>
+              <div class="game-overlay">
+                <h6>
+                  <a href="#">
+                    JUDGE
+                    <span>600 U.C</span>
+                  </a>
+                </h6>
+                <a href="#" class="cart">
+                  <i class="fas fa-shopping-basket"></i>
+                </a>
+              </div>
+            </div>
+            <div class="game-item">
+              <div class="game-cover-pic">
+                <img src="./images/popular_games08.jpg">
+              </div>
+              <div class="game-content">
+                <div class="top-up-star">
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>PUBG <span>MOBILE</span></p>
+              </div>
+              <div class="game-overlay">
+                <h6>
+                  <a href="#">
+                    JUDGE
+                    <span>600 U.C</span>
+                  </a>
+                </h6>
+                <a href="#" class="cart">
+                  <i class="fas fa-shopping-basket"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!------------------ 遊戲玩家 ------------------------>
+      <section id="game-features-area">
+        <div class="features-text">
+          <h2 class="title">
+            JUST <span>FOR</span> GAMERS FEATURE
+          </h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has <br> been the
+            industry's standard dummy text ever since the when</p>
+        </div>
+        <div class="game-features-list">
+          <div class="game-features-item">
+            <div class="game-features-cover-pic">
+              <img src="./images/features_img01.jpg">
+            </div>
+            <div class="game-features-content">
+              <div class="game-features-tag">
+                <a href="#">PUBG</a>
+              </div>
+              <h3>
+                <a href="#" class="change-color">PUBG GAMING UC DAILY</a>
+              </h3>
+              <p>
+                ENTRY FREE : <span>FREE</span>
+              </p>
+            </div>
+          </div>
+          <div class="game-features-item">
+            <div class="game-features-cover-pic">
+              <img src="./images/features_img02.jpg">
+            </div>
+            <div class="game-features-content">
+              <div class="game-features-tag">
+                <a href="#">DOTA 2</a>
+              </div>
+              <h3>
+                <a href="#" class="change-color">VERTICAL GAMES DAILY</a>
+              </h3>
+              <p>
+                ENTRY FREE : <span>FREE</span>
+              </p>
+            </div>
+          </div>
+          <div class="game-features-item">
+            <div class="game-features-cover-pic">
+              <img src="./images/features_img03.jpg">
+            </div>
+            <div class="game-features-content">
+              <div class="game-features-tag">
+                <a href="#">COD</a>
+              </div>
+              <h3>
+                <a href="#" class="change-color">VR VIRTUAL PRO GAMERS</a>
+              </h3>
+              <p>
+                ENTRY FREE : <span>FREE</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="video-area">
+        <div class="video-wrap">
+          <div class="video-play">
+            <img src="./images/video_img.png">
+            <a href="https://www.youtube.com/watch?v=K-5EdHZ0hBs" class="popup-video">
+              <i class="flaticon-play-button"></i>
+            </a>
+          </div>
+          <div class="video-content">
+            <span class="sub-title">ONLINE　GAMING</span>
+            <h2 class="video-content-title">
+              JUST <span> FOR </span> ONLINE GAMING <br> PLATFORM FEATURE
+            </h2>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and tyetting industry. <br> Lorem Ipsum has been the
+              industry's that standard dummy text ever since the when text of the printing.
+            </p>
+            <a href="#" class="btn">READ　MORE</a>
+          </div>
+        </div>
+        <div class="video-top-shade">
+          <img src="./images/video_top_shape.png">
+        </div>
+      </section>
+    </div>
+
+    <section id="gallery-area">
+      <div class="all-img">
+        <div class="gallery-img-item">
+          <a href="./images/gallery_img01.jpg" class="popup-image">
+            <img src="./images/gallery_img01.jpg" class="gallery-image">
+            <img src="./images/gallery_hover.png" class="gallery-hover-icon">
+          </a>
+        </div>
+        <div class="gallery-img-item">
+          <a href="./images/gallery_img02.jpg" class="popup-image">
+            <img src="./images/gallery_img02.jpg" class="gallery-image">
+            <img src="./images/gallery_hover.png" class="gallery-hover-icon">
+          </a>
+        </div>
+        <div class="gallery-img-item">
+          <a href="./images/gallery_img03.jpg" class="popup-image">
+            <img src="./images/gallery_img03.jpg" class="gallery-image">
+            <img src="./images/gallery_hover.png" class="gallery-hover-icon">
+          </a>
+        </div>
+        <div class="gallery-img-item">
+          <a href="./images/gallery_img04.jpg" class="popup-image">
+            <img src="./images/gallery_img04.jpg" class="gallery-image">
+            <img src="./images/gallery_hover.png" class="gallery-hover-icon">
+          </a>
+        </div>
+        <div class="gallery-img-item">
+          <a href="./images/gallery_img05.jpg" class="popup-image">
+            <img src="./images/gallery_img05.jpg" class="gallery-image">
+            <img src="./images/gallery_hover.png" class="gallery-hover-icon">
+          </a>
+        </div>
+        <div class="gallery-img-item">
+          <a href="./images/gallery_img06.jpg" class="popup-image">
+            <img src="./images/gallery_img06.jpg" class="gallery-image">
+            <img src="./images/gallery_hover.png" class="gallery-hover-icon">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="best-game-area">
+      <div id="container">
+        <div class="best-game-wrap">
+          <div class="best-games-offers">
+            <div class="best-game-title">
+              <h4><span>BEST</span> GAMES OFFERS</h4>
+            </div>
+            <div class="best-game-item">
+              <div class="best-game-thumb">
+                <img src="./images/game_thumb01.jpg">
+              </div>
+              <div class="best-game-content1">
+                <h6>
+                  <a href="#" class="change-color">
+                    PUBG MOBILE 600 U.C ONLINE
+                  </a>
+                </h6>
+                <div class="rating">
+                  <div class="fas fa-star"></div>
+                  <div class="fas fa-star"></div>
+                  <div class="fas fa-star"></div>
+                  <div class="fas fa-star"></div>
+                  <div class="fas fa-star"></div>
+                </div>
+                <span class="price">$12.00</span>
+              </div>
+            </div>
+            <div class="best-game-item">
+              <div class="best-game-thumb">
+                <img src="./images/game_thumb04.jpg">
+              </div>
+              <div class="best-game-content1">
+                <h6>
+                  <a href="#" class="change-color">
+                    ZOMBIE HUNTER MOBILE 600 U.C ONLINE
+                  </a>
+                </h6>
+                <div class="rating">
+                  <div class="fas fa-star"></div>
+                  <div class="fas fa-star"></div>
+                  <div class="fas fa-star"></div>
+                  <div class="fas fa-star"></div>
+                  <div class="fas fa-star"></div>
+                </div>
+                <span class="price">$24.00</span>
+              </div>
+            </div>
+            <div class="best-game-item">
+              <div class="best-game-thumb">
+                <img src="./images/game_thumb03.jpg">
+              </div>
+              <div class="best-game-content1">
+                <h6>
+                  <a href="#" class="change-color">
+                    DOTA2 IS POPULAR PRO BECAUSE
+                  </a>
+                </h6>
+                <div class="rating">
+                  <div class="fas fa-star"></div>
+                  <div class="fas fa-star"></div>
+                  <div class="fas fa-star"></div>
+                  <div class="fas fa-star"></div>
+                  <div class="fas fa-star"></div>
+                </div>
+                <span class="price">$39.00</span>
+              </div>
+            </div>
+            <div class="best-game-item">
+              <div class="best-game-thumb">
+                <img src="./images/game_thumb04.jpg">
+              </div>
+              <div class="best-game-content1">
+                <h6>
+                  <a href="#" class="change-color">
+                    I.G.I IS A MOBILE 600 U.C ONLINE
+                  </a>
+                </h6>
+                <div class="rating">
+                  <div class="fas fa-star"></div>
+                  <div class="fas fa-star"></div>
+                  <div class="fas fa-star"></div>
+                  <div class="fas fa-star"></div>
+                  <div class="fas fa-star"></div>
+                </div>
+                <span class="price">$19.00</span>
+              </div>
+            </div>
+            <div class="best-game-item">
+              <div class="best-game-thumb">
+                <img src="./images/game_thumb05.jpg">
+              </div>
+              <div class="best-game-content1">
+                <h6>
+                  <a href="#" class="change-color">
+                    SKY WARRIOR MOBILE 600 U.C ONLINE
+                  </a>
+                </h6>
+                <div class="rating">
+                  <div class="fas fa-star"></div>
+                  <div class="fas fa-star"></div>
+                  <div class="fas fa-star"></div>
+                  <div class="fas fa-star"></div>
+                  <div class="fas fa-star"></div>
+                </div>
+                <span class="price">$49.00</span>
+              </div>
+            </div>
+            <div class="best-game-item">
+              <div class="best-game-thumb">
+                <img src="./images/game_thumb06.jpg">
+              </div>
+              <div class="best-game-content1">
+                <h6>
+                  <a href="#" class="change-color">
+                    SKY WARRIOR KING SHEPHDS
+                  </a>
+                </h6>
+                <div class="rating">
+                  <div class="fas fa-star"></div>
+                  <div class="fas fa-star"></div>
+                  <div class="fas fa-star"></div>
+                  <div class="fas fa-star"></div>
+                  <div class="fas fa-star"></div>
+                </div>
+                <span class="price">$59.00</span>
+              </div>
+            </div>
+          </div>
+          <div class="most-popular">
+            <div class="best-game-title">
+              <h4><span>MOST</span> POPULAR </h4>
+            </div>
+            <div class="best-game-wrap">
+              <div class="best-game-item2">
+                <div class="best-game-thumb">
+                  <img src="./images/game_thumb07.jpg">
+                </div>
+                <div class="best-game-content2">
+                  <h6>
+                    <a href="#" class="change-color">
+                      SKY WARRIOR KING GOD U.C ONLINE
+                    </a>
+                  </h6>
+                  <div class="rating">
+                    <div class="fas fa-star"></div>
+                    <div class="fas fa-star"></div>
+                    <div class="fas fa-star"></div>
+                    <div class="fas fa-star"></div>
+                    <div class="fas fa-star"></div>
+                  </div>
+                  <span class="price">$59.00</span>
+                </div>
+              </div>
+              <div class="best-game-item2">
+                <div class="best-game-thumb">
+                  <img src="./images/game_thumb08.jpg">
+                </div>
+                <div class="best-game-content2">
+                  <h6>
+                    <a href="#" class="change-color">
+                      PUBG UC GENERA TOR PLAN
+                    </a>
+                  </h6>
+                  <div class="rating">
+                    <div class="fas fa-star"></div>
+                    <div class="fas fa-star"></div>
+                    <div class="fas fa-star"></div>
+                    <div class="fas fa-star"></div>
+                    <div class="fas fa-star"></div>
+                  </div>
+                  <span class="price">$99.00</span>
+                </div>
+              </div>
+              <div class="best-game-item2">
+                <div class="best-game-thumb">
+                  <img src="./images/game_thumb09.jpg">
+                </div>
+                <div class="best-game-content2">
+                  <h6>
+                    <a href="#" class="change-color">
+                      DOTA2 IS POPULAR BECAUSE
+                    </a>
+                  </h6>
+                  <div class="rating">
+                    <div class="fas fa-star"></div>
+                    <div class="fas fa-star"></div>
+                    <div class="fas fa-star"></div>
+                    <div class="fas fa-star"></div>
+                    <div class="fas fa-star"></div>
+                  </div>
+                  <span class="price">$99.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-top-area">
+      <div id="container">
+        <div class="footer-menu-wrap">
+          <ul>
+            <li class="menu-item">
+              <a href="#" class="change-color">HOME</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="change-color">PAGES</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="change-color">OVERVIEW</a>
+            </li>
+            <li class="footer-logo">
+              <a href="#">
+                <img src="./images/logo.png" alt="">
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="change-color">COMMUNTIY</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="change-color">BLOG</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="change-color">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+        <div class="info-wrap">
+          <div class="footer-widget">
+            <div class="info-title">
+              <h6>ADDRESS OFFICE</h6>
+            </div>
+            <div class="footer-contact-info">
+              <ul>
+                <li>
+                  <p>Park Street 223b Nwe York, CA 70413 <br>
+                    <span>Open:</span> 8:30 AM 9:30PM</p>
+                </li>
+                <li style="padding-bottom: 10px;">
+                  <i class="fas fa-headphones"></i>
+                  <span>Phone :</span>
+                  +24 1245 654 235
+                </li>
+                <li>
+                  <i class="fas fa-envelope-open"></i>
+                  <span>Email :</span>
+                  info@exemple.com
+                </li>
+              </ul>
+              <div class="footer-social ">
+                <a href="#">
+                  <i class="fab fa-facebook-f change-color"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-twitter change-color"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-pinterest-p change-color"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-linkedin-in change-color"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-widget">
+            <div class="info-title">
+              <h6>TREND GAMES</h6>
+            </div>
+            <div class="trend-game-info">
+              <ul>
+                <li>
+                  <a href="#" class="change-color">The King: Judge Destiny</a>
+                </li>
+                <li>
+                  <a href="#" class="change-color">PUBG Mobile UC</a>
+                </li>
+                <li>
+                  <a href="#" class="change-color">Era of Celestials</a>
+                </li>
+                <li>
+                  <a href="#" class="change-color">Legacy of Discord</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-widget">
+            <div class="info-title">
+              <h6>NEED HELP?</h6>
+            </div>
+            <div class="trend-game-info">
+              <ul>
+                <li>
+                  <a href="#" class="change-color">Terms & Conditions</a>
+                </li>
+                <li>
+                  <a href="#" class="change-color">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#" class="change-color">Refund Policy</a>
+                </li>
+                <li>
+                  <a href="#" class="change-color">FAQ Use Cases</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-widget">
+            <div class="info-title">
+              <h6>RECENT COMMENTS</h6>
+            </div>
+            <div class="comment">
+              <ul>
+                <li>
+                  <span>Elon Musk :</span>
+                  <a href="#" class="change-color">Designed for Support Our super suppor</a>
+                </li>
+                <li>
+                  <span>Jonny Bairstow :</span>
+                  <a href="#" class="change-color">Wired Full Coverag Super Support Bra</a>
+                </li>
+                <li>
+                  <span>Tomas Musk :</span>
+                  <a href="#" class="change-color">Top game for Support Our super suppor</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright-wrap">
+        <div id="container">
+          <div class="copyright-text">
+            <p>
+              Copyright © 2020 <a href="#"> Vinom </a> All Rights Reserved.
+            </p>
+          </div>
+          <div class="payment-method">
+            <img src="./images/card_img.png">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- fontawesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
+    integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous">
+  </script>
+  <!-- index.js -->
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

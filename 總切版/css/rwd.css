@@ -1,0 +1,283 @@
+@media (max-width: 767px) {
+  #container {
+    min-width: 95%;
+  }
+
+  .header-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 65px;
+    min-height: 65px;
+  }
+
+  .header-right {
+    margin-bottom: 90px;
+  }
+
+  .header-area {
+    display: flex;
+    align-content: space-between;
+  }
+
+  .nav-bar {
+    display: none;
+  }
+
+  .none2 {
+    display: none;
+  }
+
+  #slide-area .big-img {
+    top: 0;
+  }
+
+  .boost-list {
+    margin-top: 30px;
+  }
+
+  #game-boost-area .boost-list .boost-item {
+    width: 100%;
+    flex: 0 0 100%;
+    padding: 20px 25px;
+  }
+
+  .item-line1::after {
+    display: none;
+  }
+
+  #game-boost-area {
+    min-height: 530px;
+  }
+
+  .product-list .product-item1,
+  .product-list .product-item2 {
+    width: 100%;
+  }
+
+  .product-list {
+    margin-top: 100px;
+  }
+
+  .game-list .game-item {
+    min-width: 100%;
+    margin: 0 0 50px 400px;
+  }
+
+  .video-wrap .video-play {
+    margin-left: 10px;
+  }
+
+  .video-wrap {
+    flex-direction: column;
+  }
+
+  #gallery-area .gallery-img-item {
+    min-width: 100%;
+  }
+
+  .game-item .game-cover-pic {
+    width: 50%;
+  }
+
+  .best-game-wrap .best-game-item {
+    width: 100%;
+  }
+
+  .best-game-item {
+    display: flex;
+    justify-content: center;
+  }
+
+  .best-games-offers {
+    min-width: 50%;
+    min-height: 800px;
+  }
+
+  .most-popular {
+    min-width: 80%;
+    margin-top: 100px;
+  }
+
+  .info-wrap .footer-widget {
+    min-width: 100%;
+  }
+
+  .payment-method {
+    display: none;
+  }
+
+  #container .copyright-text {
+    min-width: 100%;
+    padding: 0 24%;
+  }
+
+  .info-wrap {
+    padding: 0 5%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .none {
+    display: none;
+  }
+
+  .nav-bar {
+    margin-left: 50px;
+  }
+
+  .nav-bar ul li a::before {
+    opacity: 0;
+  }
+
+  .big-img .intro-text {
+    text-align: center;
+    margin: 0 15%;
+    padding: 0;
+  }
+
+  #game-boost-area .boost-item {
+    width: 50%;
+    flex: 0 0 50%;
+    padding: 19px 55px;
+  }
+
+  #game-boost-area .boost-item:last-child {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  #game-boost-wrap {
+    justify-content: center;
+  }
+
+  .item-line2::after {
+    display: none;
+  }
+
+  #game-boost-area {
+    min-height: 430px;
+  }
+
+  .product-list {
+    flex-wrap: wrap;
+  }
+
+  .product-list .product-item1,
+  .product-list .product-item2 {
+    min-width: 85%;
+  }
+
+  .product-list .product-item2 {
+    margin: 30px 0;
+  }
+
+  .game-list .game-item {
+    width: 40%;
+  }
+
+  .game-cover-pic {
+    width: 95%;
+  }
+
+  .game-cover-pic img {
+    width: 100%;
+  }
+
+  .video-wrap {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .video-play img {
+    width: 100%;
+  }
+
+  .video-content {
+    margin: 0 10%;
+  }
+
+  .game-features-list {
+    flex-wrap: wrap;
+  }
+
+  #gallery-area .gallery-img-item {
+    margin: 0;
+  }
+
+  #gallery-area .gallery-img-item:nth-child(1),
+  #gallery-area .gallery-img-item:nth-child(2) {
+    height: 390px;
+  }
+
+  .gallery-img-item {
+    width: 50%;
+  }
+
+  .popup-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .best-game-wrap .most-popular {
+    width: 80%;
+    margin-top: 30px;
+  }
+
+  #best-game-area .best-games-offers {
+    width: 80%;
+  }
+
+  .best-games-offers {
+    margin-left: 30px;
+  }
+
+  .best-game-item {
+    padding-left: 10px;
+  }
+
+  .best-game-wrap {
+    justify-content: center;
+  }
+
+  .menu-item {
+    display: none;
+  }
+
+  .info-wrap {
+    min-width: 100%;
+  }
+
+  .info-wrap .footer-widget {
+    width: 45%;
+    margin: 0 25px 30px 0;
+  }
+
+  .footer-top-area .copyright-wrap {
+    display: flex;
+    padding: 60px 0 0 0;
+  }
+
+  .copyright-text {
+    float: left;
+    width: 52%;
+    height: 50px;
+  }
+  
+  .payment-method {
+    width: 48%;
+    height: 50px;
+    float: right;
+  }
+  
+}
+
+@media (min-width: 1200px) {
+  .open-slide {
+    display: none;
+  }
+
+  .video-wrap {
+    flex-direction: row-reverse;
+  }
+}
